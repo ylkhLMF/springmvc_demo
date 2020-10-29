@@ -3,4 +3,33 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+
+    <!--<servlet>-->
+    <!--    <servlet-name>disPactoryServlet</servlet-name>-->
+    <!--    <servlet-class></servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--    <servlet-name>disPactoryServlet</servlet-name>-->
+    <!--    <url-pattern>/*</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <!--第三步 根据第二步找到同名程的servletName-->
+        <servlet-name>hello</servlet-name>
+        <!--第四步 根据第三步找到servletName对应的Class-->
+        <servlet-class>com.liumf.servlet.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <!--第二步 根据请求路径匹配到servletName-->
+        <servlet-name>hello</servlet-name>
+        <!--第一步 请求路径-->
+        <url-pattern>/user</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>
